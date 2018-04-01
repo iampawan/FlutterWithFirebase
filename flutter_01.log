@@ -1,0 +1,122 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter packages get
+
+## exception
+
+YamlException: Error on line 13, column 1: Expected ':'.
+dev_dependencies:
+^
+
+```
+#0      Scanner._staleSimpleKeys (package:yaml/src/scanner.dart:491)
+#1      Scanner._fetchMoreTokens (package:yaml/src/scanner.dart:325)
+#2      Scanner.peek (package:yaml/src/scanner.dart:317)
+#3      Parser._parseBlockMappingKey (package:yaml/src/parser.dart:418)
+#4      Parser._stateMachine (package:yaml/src/parser.dart:86)
+#5      Parser.parse (package:yaml/src/parser.dart:47)
+#6      Loader._loadMapping (package:yaml/src/loader.dart:171)
+#7      Loader._loadNode (package:yaml/src/loader.dart:86)
+#8      Loader._loadMapping (package:yaml/src/loader.dart:165)
+#9      Loader._loadNode (package:yaml/src/loader.dart:86)
+#10     Loader._loadDocument (package:yaml/src/loader.dart:62)
+#11     Loader.load (package:yaml/src/loader.dart:54)
+#12     loadYamlDocument (package:yaml/yaml.dart:51)
+#13     loadYamlNode (package:yaml/yaml.dart:42)
+#14     loadYaml (package:yaml/yaml.dart:34)
+#15     _pluginFromPubspec (package:flutter_tools/src/plugins.dart:52)
+#16     _findPlugins.<anonymous closure> (package:flutter_tools/src/plugins.dart:75)
+#17     _HashVMBase&MapMixin&&_LinkedHashMapMixin.forEach (dart:collection-patch/dart:collection/compact_hash.dart:363)
+#18     _findPlugins (package:flutter_tools/src/plugins.dart:73)
+#19     injectPlugins (package:flutter_tools/src/plugins.dart:238)
+#20     FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:62)
+#21     PackagesGetCommand.runCommand (package:flutter_tools/src/commands/packages.dart:80)
+<asynchronous suspension>
+#22     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:333)
+<asynchronous suspension>
+#23     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:270)
+<asynchronous suspension>
+#24     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:142)
+<asynchronous suspension>
+#25     _rootRun (dart:async/zone.dart:1126)
+#26     _CustomZone.run (dart:async/zone.dart:1023)
+#27     runZoned (dart:async/zone.dart:1501)
+#28     AppContext.run (package:flutter_tools/src/base/context.dart:141)
+<asynchronous suspension>
+#29     FlutterCommand.run (package:flutter_tools/src/runner/flutter_command.dart:261)
+#30     CommandRunner.runCommand (package:args/command_runner.dart:194)
+<asynchronous suspension>
+#31     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:298)
+<asynchronous suspension>
+#32     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:142)
+<asynchronous suspension>
+#33     _rootRun (dart:async/zone.dart:1126)
+#34     _CustomZone.run (dart:async/zone.dart:1023)
+#35     runZoned (dart:async/zone.dart:1501)
+#36     AppContext.run (package:flutter_tools/src/base/context.dart:141)
+<asynchronous suspension>
+#37     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:254)
+<asynchronous suspension>
+#38     CommandRunner.run.<anonymous closure> (package:args/command_runner.dart:109)
+#39     new Future.sync (dart:async/future.dart:222)
+#40     CommandRunner.run (package:args/command_runner.dart:109)
+#41     FlutterCommandRunner.run (package:flutter_tools/src/runner/flutter_command_runner.dart:168)
+#42     run.<anonymous closure> (package:flutter_tools/runner.dart:54)
+<asynchronous suspension>
+#43     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:142)
+<asynchronous suspension>
+#44     _rootRun (dart:async/zone.dart:1126)
+#45     _CustomZone.run (dart:async/zone.dart:1023)
+#46     runZoned (dart:async/zone.dart:1501)
+#47     AppContext.run (package:flutter_tools/src/base/context.dart:141)
+<asynchronous suspension>
+#48     runInContext (package:flutter_tools/src/context_runner.dart:41)
+<asynchronous suspension>
+#49     run (package:flutter_tools/runner.dart:49)
+#50     main (package:flutter_tools/executable.dart:48)
+<asynchronous suspension>
+#51     main (file:///Users/pawankumar/Desktop/flutter/flutter/packages/flutter_tools/bin/flutter_tools.dart:16)
+#52     _startIsolate.<anonymous closure> (dart:isolate-patch/dart:isolate/isolate_patch.dart:277)
+#53     _RawReceivePortImpl._handleMessage (dart:isolate-patch/dart:isolate/isolate_patch.dart:165)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel master, v0.2.7-pre.5, on Mac OS X 10.13.3 17D102, locale en-IN)
+    • Flutter version 0.2.7-pre.5 at /Users/pawankumar/Desktop/flutter/flutter
+    • Framework revision 68db514ec0 (33 hours ago), 2018-03-30 19:48:51 -0700
+    • Engine revision c903c217a1
+    • Dart version 2.0.0-dev.43.0.flutter-52afcba357
+
+[✓] Android toolchain - develop for Android devices (Android SDK 27.0.3)
+    • Android SDK at /Users/pawankumar/Library/Android/sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-27, build-tools 27.0.3
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+    • All Android licenses accepted.
+
+[✓] iOS toolchain - develop for iOS devices (Xcode 9.3)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 9.3, Build version 9E145
+    • ios-deploy 1.9.2
+    • CocoaPods version 1.3.1
+
+[✓] Android Studio (version 3.1)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+
+[✓] IntelliJ IDEA Ultimate Edition (version 2017.3.5)
+    • IntelliJ at /Applications/IntelliJ IDEA.app
+    • Flutter plugin version 23.1.2
+    • Dart plugin version 173.4700
+
+[✓] Connected devices (2 available)
+    • Android SDK built for x86 • emulator-5554                        • android-x86 • Android 8.0.0 (API 26) (emulator)
+    • iPhone X                  • 6CC56568-E5AC-4347-B026-53018C7299D8 • ios         • iOS 11.3 (simulator)
+
+• No issues found!
+```
