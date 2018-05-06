@@ -11,6 +11,7 @@ dependencies:
   firebase_auth:
   google_sign_in:
   cloud_firestore: 
+  flutter_staggered_grid_view:
 
 dev_dependencies:
   flutter_test:
@@ -29,8 +30,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
+  assets:
+   - assets/wallfy.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
