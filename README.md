@@ -6,11 +6,11 @@ A Flutter project with implementation of all firebase libraries for Android and 
 
 ## Watch Video Tutorials
 
-[1. Firebase Setup | Firebase Auth | Google Sign-In](https://youtu.be/8M-Fa239Hy4)
+1.  [Firebase Setup | Firebase Auth | Google Sign-In](https://youtu.be/8M-Fa239Hy4)
 
-[2. Firebase Cloud Firestore | CRUD | Realtime | Go Serverless](https://youtu.be/HzKdJekhXoc)
+1.  [Firebase Cloud Firestore | CRUD | Realtime | Go Serverless](https://youtu.be/HzKdJekhXoc)
 
-[2. Firebase Build Beautiful Wallpaper App](https://youtu.be/SrGP1BdkYpk)
+1.  [Firebase Build Beautiful Wallpaper App](https://youtu.be/SrGP1BdkYpk)
 
 ### Screenshots
 
