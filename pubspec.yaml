@@ -12,6 +12,8 @@ dependencies:
   google_sign_in:
   cloud_firestore: 
   flutter_staggered_grid_view:
+  firebase_admob: ^0.5.2
+
 
 dev_dependencies:
   flutter_test:

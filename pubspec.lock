@@ -92,6 +92,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.1"
+  firebase_admob:
+    dependency: "direct main"
+    description:
+      name: firebase_admob
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.2"
   firebase_auth:
     dependency: "direct main"
     description:
@@ -256,6 +263,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.5.1"
+  platform:
+    dependency: transitive
+    description:
+      name: platform
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.1.2"
   plugin:
     dependency: transitive
     description:
