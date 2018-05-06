@@ -4,10 +4,17 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:firebase_admob/firebase_admob.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_analytics/observer.dart';
 
 const String testDevice = '';
 
 class WallScreen extends StatefulWidget {
+  final FirebaseAnalytics analytics;
+  final FirebaseAnalyticsObserver observer;
+
+  WallScreen({this.analytics, this.observer});
+
   @override
   _WallScreenState createState() => new _WallScreenState();
 }
@@ -47,6 +54,16 @@ class _WallScreenState extends State<WallScreen> {
         });
   }
 
+  Future<Null> _currentScreen() async {
+    await widget.analytics.setCurrentScreen(
+        screenName: 'Wall Screen', screenClassOverride: 'WallScreen');
+  }
+
+  Future<Null> _sendAnalytics() async {
+    await widget.analytics
+        .logEvent(name: 'full_screen_tapped', parameters: <String, dynamic>{});
+  }
+
   @override
   void initState() {
     // TODO: implement initState
@@ -61,6 +78,8 @@ class _WallScreenState extends State<WallScreen> {
         wallpapersList = datasnapshot.documents;
       });
     });
+
+    // _currentScreen();
   }
 
   @override
@@ -90,6 +109,7 @@ class _WallScreenState extends State<WallScreen> {
                         new BorderRadius.all(new Radius.circular(8.0)),
                     child: new InkWell(
                       onTap: () {
+                        _sendAnalytics();
                         createInterstitialAd()
                           ..load()
                           ..show();
