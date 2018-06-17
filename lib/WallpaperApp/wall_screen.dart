@@ -73,7 +73,7 @@ class _WallScreenState extends State<WallScreen> {
     _bannerAd = createBannerAd()
       ..load()
       ..show();
-    subscription = collectionReference.snapshots.listen((datasnapshot) {
+    subscription = collectionReference.snapshots().listen((datasnapshot) {
       setState(() {
         wallpapersList = datasnapshot.documents;
       });

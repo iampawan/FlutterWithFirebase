@@ -78,7 +78,7 @@ class CrudSampleState extends State<CrudSample> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    subscription = documentReference.snapshots.listen((datasnapshot) {
+    subscription = documentReference.snapshots().listen((datasnapshot) {
       if (datasnapshot.exists) {
         setState(() {
           myText = datasnapshot.data['desc'];
