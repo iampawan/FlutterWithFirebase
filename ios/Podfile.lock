@@ -28,6 +28,21 @@ PODS:
   - Firebase/Firestore (5.0.1):
     - Firebase/CoreOnly
     - FirebaseFirestore (= 0.12.1)
+  - Firebase/MLVision (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseMLVision (= 0.9.0)
+  - Firebase/MLVisionBarcodeModel (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseMLVisionBarcodeModel (= 0.9.0)
+  - Firebase/MLVisionFaceModel (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseMLVisionFaceModel (= 0.9.0)
+  - Firebase/MLVisionLabelModel (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseMLVisionLabelModel (= 0.9.0)
+  - Firebase/MLVisionTextModel (5.0.1):
+    - Firebase/CoreOnly
+    - FirebaseMLVisionTextModel (= 0.9.0)
   - firebase_admob (0.0.1):
     - Firebase/AdMob
     - Firebase/Core
@@ -37,6 +52,9 @@ PODS:
     - Flutter
   - firebase_auth (0.0.1):
     - Firebase/Auth
+    - Firebase/Core
+    - Flutter
+  - firebase_core (0.0.1):
     - Firebase/Core
     - Flutter
   - FirebaseAnalytics (5.0.0):
@@ -65,11 +83,44 @@ PODS:
     - Protobuf (~> 3.1)
   - FirebaseInstanceID (3.0.0):
     - FirebaseCore (~> 5.0)
+  - FirebaseMLCommon (0.9.0)
+  - FirebaseMLVision (0.9.0):
+    - FirebaseCore (~> 5.0)
+    - FirebaseMLCommon (~> 0.9)
+    - GoogleAPIClientForREST/Core (~> 1.3)
+    - GoogleAPIClientForREST/Vision (~> 1.3)
+    - GoogleMobileVision/Detector (~> 1.3.0)
+  - FirebaseMLVisionBarcodeModel (0.9.0):
+    - GoogleMobileVision/BarcodeDetector (~> 1.3.0)
+  - FirebaseMLVisionFaceModel (0.9.0):
+    - GoogleMobileVision/FaceDetector (~> 1.3.0)
+  - FirebaseMLVisionLabelModel (0.9.0):
+    - GoogleMobileVision/LabelDetector (~> 1.3.0)
+  - FirebaseMLVisionTextModel (0.9.0):
+    - GoogleMobileVision/TextDetector (~> 1.3.0)
   - Flutter (1.0.0)
   - Google-Mobile-Ads-SDK (7.30.0)
   - google_sign_in (0.0.1):
     - Flutter
     - GoogleSignIn (~> 4.0)
+  - GoogleAPIClientForREST/Core (1.3.4):
+    - GTMSessionFetcher (>= 1.1.7)
+  - GoogleAPIClientForREST/Vision (1.3.4):
+    - GoogleAPIClientForREST/Core
+    - GTMSessionFetcher (>= 1.1.7)
+  - GoogleMobileVision/BarcodeDetector (1.3.0):
+    - GoogleMobileVision/Detector (~> 1.3)
+  - GoogleMobileVision/Detector (1.3.0):
+    - GoogleToolboxForMac/Logger (~> 2.1)
+    - "GoogleToolboxForMac/NSData+zlib (~> 2.1)"
+    - GTMSessionFetcher/Core (~> 1.1)
+    - Protobuf (~> 3.1)
+  - GoogleMobileVision/FaceDetector (1.3.0):
+    - GoogleMobileVision/Detector (~> 1.3)
+  - GoogleMobileVision/LabelDetector (1.3.0):
+    - GoogleMobileVision/Detector (~> 1.3)
+  - GoogleMobileVision/TextDetector (1.3.0):
+    - GoogleMobileVision/Detector (~> 1.3)
   - GoogleSignIn (4.1.2):
     - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
     - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
@@ -78,6 +129,8 @@ PODS:
   - GoogleToolboxForMac/DebugUtils (2.1.4):
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - GoogleToolboxForMac/Defines (2.1.4)
+  - GoogleToolboxForMac/Logger (2.1.4):
+    - GoogleToolboxForMac/Defines (= 2.1.4)
   - "GoogleToolboxForMac/NSData+zlib (2.1.4)":
     - GoogleToolboxForMac/Defines (= 2.1.4)
   - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.4)":
@@ -111,7 +164,17 @@ PODS:
   - GTMSessionFetcher/Core (1.1.15)
   - GTMSessionFetcher/Full (1.1.15):
     - GTMSessionFetcher/Core (= 1.1.15)
+  - image_picker (0.0.1):
+    - Flutter
   - leveldb-library (1.20)
+  - mlkit (0.0.1):
+    - Firebase/Core
+    - Firebase/MLVision
+    - Firebase/MLVisionBarcodeModel
+    - Firebase/MLVisionFaceModel
+    - Firebase/MLVisionLabelModel
+    - Firebase/MLVisionTextModel
+    - Flutter
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -124,8 +187,11 @@ DEPENDENCIES:
   - firebase_admob (from `.symlinks/plugins/firebase_admob/ios`)
   - firebase_analytics (from `.symlinks/plugins/firebase_analytics/ios`)
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
+  - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `.symlinks/flutter/ios`)
   - google_sign_in (from `.symlinks/plugins/google_sign_in/ios`)
+  - image_picker (from `.symlinks/plugins/image_picker/ios`)
+  - mlkit (from `.symlinks/plugins/mlkit/ios`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -137,7 +203,15 @@ SPEC REPOS:
     - FirebaseDatabase
     - FirebaseFirestore
     - FirebaseInstanceID
+    - FirebaseMLCommon
+    - FirebaseMLVision
+    - FirebaseMLVisionBarcodeModel
+    - FirebaseMLVisionFaceModel
+    - FirebaseMLVisionLabelModel
+    - FirebaseMLVisionTextModel
     - Google-Mobile-Ads-SDK
+    - GoogleAPIClientForREST
+    - GoogleMobileVision
     - GoogleSignIn
     - GoogleToolboxForMac
     - gRPC
@@ -159,27 +233,42 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_analytics/ios"
   firebase_auth:
     :path: ".symlinks/plugins/firebase_auth/ios"
+  firebase_core:
+    :path: ".symlinks/plugins/firebase_core/ios"
   Flutter:
     :path: ".symlinks/flutter/ios"
   google_sign_in:
     :path: ".symlinks/plugins/google_sign_in/ios"
+  image_picker:
+    :path: ".symlinks/plugins/image_picker/ios"
+  mlkit:
+    :path: ".symlinks/plugins/mlkit/ios"
 
 SPEC CHECKSUMS:
   BoringSSL: 60dd24df4af296bf41d78e5841dbb95d75f88c0d
-  cloud_firestore: 00886d0b271577dfadd33be97d6bb6095f49499d
+  cloud_firestore: a2d49d9c7219fce31033eb1a2ee953d7733c91d6
   Firebase: d6861c2059d8c32d1e6dd8932e22ada346d90a3a
   firebase_admob: b8cc46113ddf88a62fec340e9446607a5061a872
   firebase_analytics: ad15e54404e21983408c8b0c24a9d11247be7f33
-  firebase_auth: 499d5bfb249606a276f6bddf292a3b2d44139f75
+  firebase_auth: 27a5a77a032d557c18f8e223aaf8ec1368f6cdbc
+  firebase_core: c96aa8b2fcf7f5167d32f22034f502f9304952b8
   FirebaseAnalytics: 19812b49fa5f283dd6b23edf8a14b5d477029ab8
   FirebaseAuth: acbeef02fe7c3a26624e309849f3fe30c84115af
   FirebaseCore: cafc814b2d84fc8733f09e653041cc2165332ad7
   FirebaseDatabase: 697eb53e5b4fe7cd4fa8756c1f82a9fca011345f
   FirebaseFirestore: f686b8e83f3cf8bbc37db6e98e01029a14f01f55
   FirebaseInstanceID: 83e0040351565df711a5db3d8ebe5ea21aca998a
+  FirebaseMLCommon: 73a2f53c8b3e6cd18e73dd1be095c3192af26a5e
+  FirebaseMLVision: f9756d8376dd150fb17629eaa7bdc6baa8965677
+  FirebaseMLVisionBarcodeModel: dc1c6add14a3d69061eb6edacf90bb619f7aee52
+  FirebaseMLVisionFaceModel: 0b451ba1d40674dfc4a334ebd40f5f837fe283a1
+  FirebaseMLVisionLabelModel: ab16cb2bc13630ee13d9b0c6104b94165e86933c
+  FirebaseMLVisionTextModel: 8a9cb61296d4d15d60eb0c7c66a2a88790b34376
   Flutter: 9d0fac939486c9aba2809b7982dfdbb47a7b0296
   Google-Mobile-Ads-SDK: 7404f68120ae8682afeb5af001fbf4aad731c78e
-  google_sign_in: 64523e9b42c475b01b726ff87e450425ea6d15bc
+  google_sign_in: cbeb57b96679823d14df6b2240b629b983a42d79
+  GoogleAPIClientForREST: f7951c455df271bc6259b3ddb4073d0026475ccf
+  GoogleMobileVision: 8c57c6b27b0964506cb7163049e67a38e279ea6f
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 91c824d21e85b31c2aae9bb011c5027c9b4e738f
   gRPC: 9362451032695e2dfb7bafcd3740e3a27939e4ff
@@ -188,7 +277,9 @@ SPEC CHECKSUMS:
   gRPC-RxLibrary: 1ed5314e8b38cd6e55c9bfa048387136ae925ce9
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
+  image_picker: ee00aab0487cedc80a304085219503cc6d0f2e22
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  mlkit: 42aa3a7af1c9b080e52728dd7999668181e3ab3f
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
 

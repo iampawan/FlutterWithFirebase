@@ -172,6 +172,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.2"
+  image_picker:
+    dependency: "direct main"
+    description:
+      name: image_picker
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.5"
   io:
     dependency: transitive
     description:
@@ -228,6 +235,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.6+1"
+  mlkit:
+    dependency: "direct main"
+    description:
+      name: mlkit
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.1"
   multi_server_socket:
     dependency: transitive
     description:
