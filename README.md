@@ -20,7 +20,7 @@ A Flutter project with implementation of all firebase libraries for Android and 
 
 1.  [Flutter: Publish App to PlayStore | Fully Explained Demo P5](https://youtu.be/qpruGmff5Fw)
 
-1.  [Flutter Firebase MLKIT App](https://github.com/iampawan/FlutterWithFirebase/tree/mlkit)[![watch](image/youtube.png)](https://youtu.be/vT6gNFE0GBw)
+1.  [Flutter Firebase MLKIT Tutorial](https://youtu.be/vT6gNFE0GBw)
 
 ### Screenshots
 
