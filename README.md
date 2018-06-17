@@ -20,14 +20,17 @@ A Flutter project with implementation of all firebase libraries for Android and 
 
 1.  [Flutter: Publish App to PlayStore | Fully Explained Demo P5](https://youtu.be/qpruGmff5Fw)
 
+1.  [Flutter Firebase MLKIT App](https://github.com/iampawan/FlutterWithFirebase/tree/mlkit)[![watch](image/youtube.png)](https://youtu.be/vT6gNFE0GBw)
+
 ### Screenshots
 
 <img src="ss1.png" height="300em" /> <img src="ss2.png" height="300em" />
 <img src="https://thumbs.gfycat.com/GoldenCaringBurro-size_restricted.gif" height="300em" />
+<img src="https://thumbs.gfycat.com/BadPrestigiousChrysalis-size_restricted.gif" height="300em" />
 
 ### NOTE
 
-* This project is still under development.
+- This project is still under development.
 
 # Pull Requests
 
@@ -48,7 +51,7 @@ I welcome and encourage all pull requests. It usually will take me within 24-48 
 
 > If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a cup of :coffee:
 >
-> * [PayPal](https://www.paypal.me/imthepk/)
+> - [PayPal](https://www.paypal.me/imthepk/)
 
 # License
 
